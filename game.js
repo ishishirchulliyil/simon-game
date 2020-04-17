@@ -3,9 +3,10 @@ var userClickedPattern = [];
 var buttonColours = ["red", "blue", "green", "yellow"];
 var level = 0;
 
-$(document).keypress(function(){
+$(".btnPlay").click(function(){
   if(level === 0){
     nextSequence();
+    $(".btnPlay").hide();
   }
 });
 
@@ -59,19 +60,20 @@ function checkAnswer(currentLevel){
 }
 
 function gameOver(){
-  $("h1").text("Game Over 😈! Press Any Key to Restart!");
+  $("h1").html("<p>Game Over 😈! </p><p>Your high score :"+level+"</p>");
   console.log("wrong");
   playSound("sounds/wrong.mp3");
   $("body").addClass("game-over");
   setTimeout(function(){
     $("body").removeClass("game-over");
   },200);
-  startOver()
+  startOver();
 }
 
 function startOver(){
   level = 0;
   gamepattern = [];
+  $(".btnPlay").show();
 }
 
 function checkEntireSequence(){

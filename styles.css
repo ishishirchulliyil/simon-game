@@ -10,6 +10,13 @@ body {
   color: #226b80;
 }
 
+#playBtn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin:  20px;
+  color: white;
+}
+
 p{
   font-family: 'Press Start 2P', cursive;
   padding: 40px 0 0 0;
@@ -31,6 +38,16 @@ p{
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+.btnPlay {
+  margin: 25px 0 25px 0;
+  display: inline-block;
+  height: 80px;
+  width: 200px;
+  background-color: #226b80;
+  opacity: 0.8;
+  border-radius: 15%;
 }
 
 .game-over {
